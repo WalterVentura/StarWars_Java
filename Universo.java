@@ -23,7 +23,7 @@ class Planeta {
 	private String nome;
 	private String cor;
 	private int diametro;
-	private String sistema; //nome do sistema planet�rio onde se encontra o planeta
+	private String sistema; //nome do sistema planet�rio onde se encontra o planeta
 
 	public String getNome() {
 		return nome;
@@ -56,17 +56,17 @@ class Planeta {
 }
 
 class Governo{
-	private Data in�cio;
+	private Data início;
 	private Data fim;
 	private String capital; //planeta central do governo
 	private String nome;
-	private String tipo; //republica, imp�rio, etc.
+	private String tipo; //republica, imp�rio, etc.
 	
-	public Data getIn�cio() {
-		return in�cio;
+	public Data getInício() {
+		return início;
 	}
-	public void setIn�cio(Data in�cio) {
-		this.in�cio = in�cio;
+	public void setInício(Data início) {
+		this.início = início;
 	}
 	
 	public Data getFim() {
@@ -101,7 +101,7 @@ class Governo{
 
 class Ser{
 	private String nome;
-	private String sexo; //macho, f�mea, indeterminado, ambos...
+	private String sexo; //macho, f�mea, indeterminado, ambos...
 	private String especie;
 	private Data dataDeNascenca;
 	private Planeta planetaNatal;
@@ -154,7 +154,7 @@ class Ser{
 class Academia{
 	private String nome;
 	private String vertente; //jedi ou sith
-	private String nomeOrganizacao; //nome da organiza��o que administra a academia
+	private String nomeOrganizacao; //nome da organiza��o que administra a academia
 	
 	public String getNome() {
 		return nome;
@@ -178,7 +178,7 @@ class Academia{
 	}
 }
 
-class Cl�{
+class Clã{
 	private String nome;
 	private Data dataDeFundacao;
 	private Ser fundador;
@@ -203,5 +203,117 @@ class Cl�{
 	public void setFundador(Ser fundador) {
 		this.fundador = fundador;
 	}
-	
+
+}
+
+class Youngling extends Ser{
+	private Data dataDeIngresso;
+	private String clã;
+
+	public Data getDataDeIngresso() {
+		return dataDeIngresso;
+	}
+	public void setDataDeIngresso(Data dataDeIngresso) {
+		this.dataDeIngresso = dataDeIngresso;
+	}
+
+	public String getClã() {
+		return clã;
+	}
+	public void setClã(String clã) {
+		this.clã = clã;
+	}
+
+}
+
+class Padawan extends Ser{
+	private Data dataDePromocão;
+	private String mestre;
+
+	public Data getDataDePromocão() {
+		return dataDePromocão;
+	}
+	public void setDataDePromocão(Data dataDePromocão) {
+		this.dataDePromocão = dataDePromocão;
+	}
+
+	public String getMestre() {
+		return mestre;
+	}
+	public void setMestre(String mestre) {
+		this.mestre = mestre;
+	}
+
+}
+
+class CavaleiroJedi extends Ser{
+	private Data dataDePromocão;
+
+	public Data getDataDePromocão() {
+		return dataDePromocão;
+	}
+	public void setDataDePromocão(Data dataDePromocão) {
+		this.dataDePromocão = dataDePromocão;
+	}
+}
+
+class MestreJedi extends Ser{
+	private boolean imortal;
+	private int campoDeVidencia;
+
+	public boolean getImortal() {
+		return imortal;
+	}
+	public void setImortal(boolean imortal) {
+		this.imortal = imortal;
+	}
+
+	public int getcampoDeVidencia() {
+		return campoDeVidencia;
+	}
+	public void setcampoDeVidencia(int campoDeVidencia) {
+		this.campoDeVidencia = campoDeVidencia;
+	}
+}
+
+class Sith extends Ser
+{
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+}
+
+class AprendizSith extends Sith{
+	private Data dataDeIngresso;
+	private String mestre;
+
+	public Data getDataDeIngresso() {
+		return dataDeIngresso;
+	}
+	public void setDataDeIngresso(Data dataDeIngresso) {
+		this.dataDeIngresso = dataDeIngresso;
+	}
+
+	public String getMestre() {
+		return mestre;
+	}
+	public void setmestre(String Mestre) {
+		this.mestre = mestre;
+	}
+}
+
+class LordeSith extends Sith{
+	private int campoDeVidencia;
+
+	public int getcampoDeVidencia() {
+		return campoDeVidencia;
+	}
+	public void setcampoDeVidencia(int campoDeVidencia) {
+		this.campoDeVidencia = campoDeVidencia;
+	}
 }
