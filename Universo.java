@@ -1,4 +1,4 @@
-package Ex1_Universo;
+﻿package Ex1_Universo;
 
 class Data{
 	private int ano;
@@ -208,7 +208,7 @@ class Clã{
 
 class Youngling extends Ser{
 	private Data dataDeIngresso;
-	private String clã;
+	private Clã clã;
 
 	public Data getDataDeIngresso() {
 		return dataDeIngresso;
@@ -220,7 +220,7 @@ class Youngling extends Ser{
 	public String getClã() {
 		return clã;
 	}
-	public void setClã(String clã) {
+	public void setClã(Clã clã) {
 		this.clã = clã;
 	}
 
@@ -228,7 +228,7 @@ class Youngling extends Ser{
 
 class Padawan extends Ser{
 	private Data dataDePromocão;
-	private String mestre;
+	private Ser mestre;
 
 	public Data getDataDePromocão() {
 		return dataDePromocão;
@@ -240,7 +240,7 @@ class Padawan extends Ser{
 	public String getMestre() {
 		return mestre;
 	}
-	public void setMestre(String mestre) {
+	public void setMestre(Ser mestre) {
 		this.mestre = mestre;
 	}
 
@@ -290,7 +290,7 @@ class Sith extends Ser
 
 class AprendizSith extends Sith{
 	private Data dataDeIngresso;
-	private String mestre;
+	private Ser mestre;
 
 	public Data getDataDeIngresso() {
 		return dataDeIngresso;
@@ -302,7 +302,7 @@ class AprendizSith extends Sith{
 	public String getMestre() {
 		return mestre;
 	}
-	public void setmestre(String Mestre) {
+	public void setMestre(Ser mestre) {
 		this.mestre = mestre;
 	}
 }
